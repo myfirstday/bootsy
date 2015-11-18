@@ -5,7 +5,7 @@ module Bootsy
     storage Bootsy.storage
 
     def store_dir
-      "#{Bootsy.store_dir}/#{model.class.to_s.underscore}/#{model.id}"
+      "#{Bootsy.store_dir}/#{Apartment::Tenant.current}/#{model.class.to_s.underscore}/#{model.id}"
     end
 
     process resize_to_limit: [1160, 2000]
